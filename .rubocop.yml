@@ -1,0 +1,339 @@
+# Inherited from Rubocop's config/default.yml 
+# General cops
+AllCops:
+  TargetRubyVersion: 2.4
+  # Set all cops enabled by default
+  EnabledByDefault: true
+
+# Layout cops
+Layout/AccessModifierIndentation:
+  EnforcedStyle: indent
+
+Layout/AlignHash:
+  EnforcedColonStyle: key
+  EnforcedHashRocketStyle: key
+  EnforcedLastArgumentHashStyle: always_inspect
+
+Layout/AlignParameters:
+  EnforcedStyle: with_first_parameter
+
+Layout/CaseIndentation:
+  EnforcedStyle: case
+  IndentOneStep: true
+
+Layout/DotPosition:
+  EnforcedStyle: leading
+
+Layout/EmptyLineBetweenDefs:
+  AllowAdjacentOneLineDefs: true 
+
+Layout/EmptyLinesAroundBlockBody:
+  EnforcedStyle: no_empty_lines
+
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines_except_namespace
+
+Layout/EmptyLinesAroundModuleBody:
+  EnforcedStyle: empty_lines_except_namespace
+
+Layout/EndOfLine:
+  EnforcedStyle: lf 
+
+Layout/FirstArrayElementLineBreak:
+  Enabled: false 
+
+Layout/FirstHashElementLineBreak:
+  Enabled: false 
+
+Layout/FirstMethodArgumentLineBreak:
+  Enabled: false 
+
+Layout/FirstMethodParameterLineBreak:
+  Enabled: false 
+
+Layout/FirstParameterIndentation:
+  EnforcedStyle: consistent
+
+Layout/IndentArray:
+  EnforcedStyle: consistent
+
+Layout/IndentHash:
+  EnforcedStyle: consistent
+
+Layout/IndentationConsistency:
+  EnforcedStyle: normal 
+
+Layout/IndentationWidth:
+  Width: 2
+
+Layout/MultilineArrayBraceLayout:
+  EnforcedStyle: symmetrical
+
+Layout/MultilineAssignmentLayout:
+  EnforcedStyle: new_line 
+
+Layout/MultilineHashBraceLayout:
+  EnforcedStyle: symmetrical
+
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: symmetrical
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: aligned
+
+Layout/MultilineMethodDefinitionBraceLayout:
+  EnforcedStyle: symmetrical
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: aligned
+
+Layout/SpaceAroundBlockParameters:
+  EnforcedStyleInsidePipes: no_space
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: space
+
+Layout/SpaceInLambdaLiteral:
+  EnforcedStyle: require_space
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  EnforcedStyle: no_space
+  EnforcedStyleForEmptyBrackets: no_space 
+
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+  SpaceBeforeBlockParameters: true 
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+
+Layout/SpaceInsideReferenceBrackets:
+  EnforcedStyle: no_space
+
+Layout/SpaceInsideStringInterpolation:
+  EnforcedStyle: no_space
+
+Layout/TrailingBlankLines:
+  EnforcedStyle: final_blank_line
+
+# Linting cops
+Lint/BlockAlignment:
+  EnforcedStyleAlignWith: start_of_block
+
+Lint/DefEndAlignment:
+  EnforcedStyleAlignWith: start_of_line
+
+Lint/EndAlignment:
+  EnforcedStyleAlignWith: start_of_line
+
+Lint/InheritException:
+  EnforcedStyle: runtime_error
+
+# Metrics cops
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  CountComments: false 
+  Max: 25
+
+Metrics/ClassLength:
+  CountComments: false 
+  Max: 200
+
+Metrics/CyclomaticComplexity:
+  Max: 9
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  CountComments: false 
+  Max: 80
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Max: 5
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+# Naming cops
+Naming/MethodName:
+  EnforcedStyle: snake_case
+
+Naming/VariableName:
+  EnforcedStyle: snake_case
+
+Naming/VariableNumber:
+  EnforcedStyle: normalcase
+
+# Performance cops
+# Rails cops
+Rails/ActionFilter:
+  EnforcedStyle: action
+
+Rails/Date:
+  EnforcedStyle: strict
+
+Rails/RequestReferer:
+  EnforcedStyle: referer
+
+Rails/TimeZone:
+  EnforcedStyle: strict
+
+Rails/UniqBeforePluck:
+  EnforcedStyle: conservative
+
+# Security cops
+# Style cops
+Style/Alias:
+  EnforcedStyle: prefer_alias
+
+Style/AndOr:
+  EnforcedStyle: always
+
+Style/BarePercentLiterals:
+  EnforcedStyle: bare_percent
+
+Style/BlockDelimiters:
+  EnforcedStyle: braces_for_chaining
+
+Style/BracesAroundHashParameters:
+  EnforcedStyle: braces
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: nested
+
+Style/ClassCheck:
+  EnforcedStyle: is_a?
+
+Style/CollectionMethods:
+  Enabled: false
+
+Style/CommandLiteral:
+  EnforcedStyle: percent_x
+  AllowInnerBackticks: false
+
+Style/ConditionalAssignment:
+  EnforcedStyle: assign_inside_condition
+
+Style/EmptyElse:
+  EnforcedStyle: both
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/For:
+  EnforcedStyle: each
+
+Style/FormatString:
+  EnforcedStyle: format
+
+Style/FormatStringToken:
+  EnforcedStyle: annotated
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19_no_mixed_keys
+
+Style/Lambda:
+  EnforcedStyle: lambda
+
+Style/LambdaCall:
+  EnforcedStyle: call
+
+Style/MethodDefParentheses:
+  EnforcedStyle: require_parentheses
+
+Style/MissingElse:
+  Enabled: false
+
+Style/MixinGrouping:
+  EnforcedStyle: separated 
+
+Style/ModuleFunction:
+  EnforcedStyle: module_function
+
+Style/MultilineMemoization:
+  EnforcedStyle: keyword
+
+Style/NegatedIf:
+  EnforcedStyle: both
+
+Style/Next:
+  EnforcedStyle: skip_modifier_ifs
+
+Style/NumericPredicate:
+  EnforcedStyle: predicate
+
+Style/PercentQLiterals:
+  EnforcedStyle: lower_case_q
+
+Style/PreferredHashMethods:
+  EnforcedStyle: short
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
+
+Style/RedundantException:
+  Enabled: false
+
+Style/RedundantReturn:
+  Enabled: false
+  AllowMultipleReturnValues: false
+
+Style/RegexpLiteral:
+  EnforcedStyle: percent_r
+  AllowInnerSlashes: false
+
+Style/RescueStandardError:
+  EnforcedStyle: explicit
+
+Style/ReturnNil:
+  EnforcedStyle: return_nil
+
+Style/Send:
+  Enabled: false
+
+Style/SignalException:
+  EnforcedStyle: semantic
+
+Style/SingleLineBlockParams:
+  Enabled: false 
+
+Style/StabbyLambdaParentheses:
+  EnforcedStyle: require_parentheses
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: single_quotes 
+
+Style/SymbolArray:
+  EnforcedStyle: percent
+
+Style/TernaryParentheses:
+  EnforcedStyle: require_parentheses
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: no_comma
+
+Style/WhileUntilModifier:
+  Enabled: false
+
+Style/WordArray:
+  EnforcedStyle: percent
+
+Style/YodaCondition:
+  EnforcedStyle: all_comparison_operators 
+
+# Bundler cops
+# Gemfile cops
