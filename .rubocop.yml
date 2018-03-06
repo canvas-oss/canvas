@@ -116,7 +116,7 @@ Layout/SpaceInsideStringInterpolation:
   EnforcedStyle: no_space
 
 Layout/TrailingBlankLines:
-  EnforcedStyle: final_blank_line
+  EnforcedStyle: final_newline
 
 # Linting cops
 Lint/BlockAlignment:
